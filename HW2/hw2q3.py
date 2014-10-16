@@ -1,3 +1,8 @@
+# Katie Pitts
+# KLPitts@tamu.edu
+# 10-16-2014
+# HW2, Problem 3, High pass filter
+
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -15,8 +20,8 @@ def HighPass(x, y, N=1):
 	Returns
 	___________
 	The difference between the given series and the polynomial fit.
-	
 	"""
+	
 	sol = np.polynomial.Polynomial.fit(x, y, N)
 	trend = sol(x)
 	return y - trend

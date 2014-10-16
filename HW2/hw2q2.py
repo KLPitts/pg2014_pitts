@@ -1,16 +1,14 @@
+# Katie Pitts
+# KLPitts@tamu.edu
+# 10-16-2014
+# HW2, Problem 2, rotate point around another point
+
 import matplotlib.pyplot as plt
 from math import sqrt, sin, cos, pi
 
 class Point(object):
     """Class that adds, subtracts, rotates, and calculates distances 
     between points.
-    
-	Author
-	___________
-	Katie Pitts
-	Oct 14, 2014
-	KLPitts@tamu.edu
-    
     """
 
     def __init__(self, x, y):

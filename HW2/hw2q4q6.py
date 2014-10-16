@@ -1,3 +1,8 @@
+# Katie Pitts
+# KLPitts@tamu.edu
+# 10-16-2014
+# HW2, Problems 4 and 6, Read and plot discharge data
+
 import urllib2
 import datetime
 import numpy as np
@@ -6,13 +11,6 @@ import matplotlib.pyplot as plt
 class brazos_dis(object):
 	"""
 	Class to read and plot discharge data
-	
-	Author
-	___________
-	Katie Pitts
-	Oct 14, 2014
-	KLPitts@tamu.edu
-	
 	"""
 
 	def __init__(self, filename):
@@ -60,7 +58,6 @@ class brazos_dis(object):
 				chosendischarges.append(chosendis)
 		return chosendates, chosendischarges
 	
-
 	def plot_alldis(self):
 		"""Method to plot hydrograph of entire timeseries."""
 		plt.plot(self.dates, self.discharges)
@@ -110,6 +107,8 @@ class brazos_dis(object):
 if __name__ == '__main__':
 	filename = 'http://waterdata.usgs.gov/nwis/dv?cb_00060=on&format=rdb&site_no=08116650&referred_module=sw&period=&begin_date=1967-10-01&end_date=2014-10-01'	
 	dis = brazos_dis(filename)
-	#print dis.year_dis(2012)
+	print 'Dates and discharge for 2012: \n', dis.year_dis(2012)
+	print 'Plot of hydrograph for entire timeseries: \n'
 	dis.plot_alldis()
+	print 'Plot of mean annual discharge as black line with one standard deviation in gray.\nHydroraph of 1994 discharge plotted over in red:'
 	dis.plot_composite(1994)

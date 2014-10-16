@@ -1,3 +1,8 @@
+# Katie Pitts
+# KLPitts@tamu.edu
+# 10-16-2014
+# HW2, Problem 1, distance between points
+
 import numpy as np
 
 def distance(N, M):
@@ -12,24 +17,6 @@ def distance(N, M):
 	___________
 	NxM matrix that defines the distance between each of the points in one 
 	array to each of the points in the other array.
-	
-	Examples
-	___________
-	>>> N = np.array([[5,6],[6,7],[7,8]])
-	>>> M = np.array([[1,2],[2,3]])
-	>>> dist = distance(N,M)
-	>>> print dist
-	[[ 5.65685425  4.24264069]
-	[ 7.07106781  5.65685425]
-	[ 8.48528137  7.07106781]]
-
-	
-	Author
-	___________
-	Katie Pitts
-	Oct 14, 2014
-	KLPitts@tamu.edu
-	
 	"""
 
 	d = np.sqrt( (N[:,0, np.newaxis] - M[:,0])**2 + (N[:,1, np.newaxis] - M[:,1])**2 )
@@ -40,4 +27,6 @@ if __name__ == '__main__':
 	N = np.array([[5,6],[6,7],[7,8]])
 	M = np.array([[1,2],[2,3]])
 	dist = distance(N,M)
-	print dist
+	print 'N = \n', N
+	print 'M = \n', M
+	print 'Distance between points in each array: \n', dist

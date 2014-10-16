@@ -1,3 +1,8 @@
+# Katie Pitts
+# KLPitts@tamu.edu
+# 10-16-2014
+# HW2, Problem 5, Read and plot topography/bathymetry
+
 import numpy as np
 import matplotlib.pyplot as plt
 from mpl_toolkits.basemap import Basemap, shiftgrid
@@ -8,13 +13,6 @@ def read_topo(filename):
 	"""
 	Function to read the topography/bathymetry of the world using the 
 	ETOPO5 surface dataset.
-	
-	Author
-	___________
-	Katie Pitts
-	Oct 14, 2014
-	KLPitts@tamu.edu
-	
 	"""
 	
 	f = open(filename)
